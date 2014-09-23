@@ -1,7 +1,64 @@
-doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Förstasidan</title>
+<meta charset="UTF-8">
+<meta name="Robots" content="index, follow, noarchive"/>
+<meta name="Googlebot" content="index, follow, noarchive"/>
+<meta name="Description" content="Senaste nyheter, sport, väder, TV-serier, barnprogram, SVT Play och mycket mer. Fri television på nätet."/>
+<meta name="Keywords" content="Förstasidan" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/default.css">
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</head>
+body
+	<div role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+	<div class="navbar-header">
+	<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	</button>
+	<a href="/" class="navbar-brand">HemsidaOnline Site</a>
+	</div>
+	
+	
+	div.navbar-collapse.collapse
+		ul.nav.navbar-nav
+			each item in navigation
+				li(class=(item.active)?'active':'')
+					a(href=item.url) !{item.name}
+
+	//<li><a href="#about">About</a></li>
+	//<li><a href="#contact">Contact</a></li>
+	//<li class="dropdown">
+	//<a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <span class="caret"></span></a>
+	//<ul role="menu" class="dropdown-menu">
+	//<li><a href="#">Action</a></li>
+	//<li><a href="#">Another action</a></li>
+	//<li><a href="#">Something else here</a></li>
+	//<li class="divider"></li>
+	//<li class="dropdown-header">Nav header</li>
+	//<li><a href="#">Separated link</a></li>
+	//<li><a href="#">One more separated link</a></li>
+	//</ul>
+	//</li>
+	</ul>
+	</div><!--/.nav-collapse -->
+	</div>
+	</div>
+	
+	block content
+	
+	<hr>
+	<div class="container">
+	<footer>
+	//<p>&copy; Company 2014 - <a href="http://test.hemsidaonline.se/cms/admin/templates/pages/?active_menu_item=true&mode=default" target="_blank">Logga in</a></p>
+	<p>&copy; Company 2014 - <a href="http://test.hemsidaonline.se/cms/admin/templates/pages/editposts.aspx?post_type=blog-post&active_menu_item=true" target="_blank">Logga in</a></p>
+	</footer>
+	</div>
+</html>
