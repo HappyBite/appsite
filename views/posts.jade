@@ -1,0 +1,16 @@
+﻿extends layout
+
+block content
+	<div class="container">
+	<!-- Example row of columns -->
+	<div class="row">
+	each item in posts
+		div.col-md-4
+			h2
+				a(href="/posts/post/"+item.id)= item.title
+			div !{truncate_words(item.content, 23)}
+			p
+				a(href="/posts/post/"+item.id,class="btn btn-default",role="button") Läs mer
+	</div>
+	</div>
+	//!{posts}
